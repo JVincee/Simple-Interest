@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Interest Calculator</title>
+</head>
+<body>
+  <h1>Simple Interest Calculator</h1>
+  <form id="interestForm">
+    <label>Principle Amount:</label>
+    <input type="number" id="principal" required>
+    <label>Interest Rate:</label>
+    <input type="number" id="rate" required>
+    <label>Time:</label>
+    <input type="number" id="time" required>
+    <button type="button" onclick="calculateInterest()">Calculate Interest</button>
+  </form>
+
+  <script>
+    function calculateInterest() {
+      const principal = document.getElementById('principal').value;
+      const rate = document.getElementById('rate').value;
+      const time = document.getElementById('time').value;
+
+      const simpleInterest = (principal * rate * time) / 100;
+
+      console.log(simpleInterest);
+    }
+  </script>
+</body>
+</html>
